@@ -1,0 +1,2 @@
+Main-Class: edu.vt.Miner.SocialViewer
+Class-Path: prefuse.jar profusians.jar

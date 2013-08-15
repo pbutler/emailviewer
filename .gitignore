@@ -1,0 +1,9 @@
+*.py[co]
+*.jar
+*.class
+.DS_Store
+.*swp
+INBOX
+.git_old
+testbox
+old
