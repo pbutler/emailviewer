@@ -11,14 +11,22 @@ import json
 import hashlib
 import os
 
+
 def network(request, filename):
+    """
+    displays page with network viewer
+    """
     template = loader.get_template('viz/network.html')
     context = RequestContext(request, {
         'filename': filename
     })
     return HttpResponse(template.render(context))
 
+
 def list(request):
+    """
+    prints a list with links to view various mbox files
+    """
     files = "\n".join(["<li><a href=\"/viz/network/{0}\">{0}</a></li>".format(file) for file in os.listdir("data")])
     return HttpResponse("""
                         <html>
@@ -29,7 +37,11 @@ def list(request):
                         </html>
                         """.format(files))
 
+
 def data(request, filename):
+    """ 
+    returns a json package with the network information
+    """
     gs = GraphSender()
     mbox = mailbox.mbox(os.path.join("data", filename))
     i = 0
