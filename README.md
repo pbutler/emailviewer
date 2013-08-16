@@ -22,7 +22,11 @@ Python
 ------- 
 
 Requires a newish version of django
+
 go into the emailviewer directory and run `./manage.py runserver`
 Then browse [http://localhost:8000/viz](http://localhost:8000/viz). 
 
 mbox files should be place in the data folder.
+
+The important code is in `emailviewer/viz/views.py` and `emailviewer/viz/templates/viz/network.html`.
+
